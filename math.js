@@ -1,3 +1,4 @@
+// Square
 console.group('Cuadrado')
 
 const ladoCuadrado = 5;
@@ -36,6 +37,8 @@ console.log({
     areaTriangulo,
 });
 
+// Triangle
+
 function calcularTriangulo(lado1, lado2, base, altura) {
     return {
         perimetro: lado1 + lado2 + base,
@@ -45,6 +48,7 @@ function calcularTriangulo(lado1, lado2, base, altura) {
 
 console.groupEnd('Triangulo');
 
+// Circle
 console.group('Circulo');
 const radioCirculo = 3;
 const diametroCirculo = radioCirculo * 2;
