@@ -69,4 +69,3 @@ function calcularCirculo(radio) {
 
 }
 console.groupEnd('Circulo');
-
