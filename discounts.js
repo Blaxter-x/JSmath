@@ -1,28 +1,39 @@
 const inputPrice = document.querySelector('#price');
-const inputDiscount = document.querySelector('#discount');
+const inputCoupon = document.querySelector('#coupon');
 const btn = document.querySelector('#calculate');
-const pNewPrice = document.querySelector('#newPrice');
+const outputNewPrice = document.querySelector('#newPrice');
 
 btn.addEventListener('click', calculatePriceWithDiscount);
+
+const couponsObj = {
+    'CUPON1': 30,
+    'CUPON2': 25,
+    'CUPON3': 15,
+}
+
+
 
 function calculatePriceWithDiscount() {
     // (P * (100 - D)) / 100
 
     const price = Number(inputPrice.value);
-    const discount = Number(inputDiscount.value);
+    const coupon = inputCoupon.value.toUpperCase();
 
-    if (!price || !discount) {
-        pNewPrice.innerText = `Please type the values for calculation`;
+    if (!price || !coupon) {
+        outputNewPrice.innerText = `Please type the values for calculation`;
         return;
     }
 
-    if (discount >= 100) {
-        pNewPrice.innerText = `We never lose money!!!, try again`;
+    let discount;
+
+    if (couponsObj[coupon]) {
+        discount = couponsObj[coupon];
+    } else {
+        outputNewPrice.innerText = 'The coupon is not valid';
         return;
     }
 
     const newPrice = (price * (100 - discount)) / 100;
 
-    pNewPrice.innerText = `The price is ${price} with discount of ${discount},\
-    the new price is ${newPrice}`;
+    outputNewPrice.innerText = "The new price with discount is $" + newPrice;
 }

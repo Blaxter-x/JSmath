@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate price with discount</title>
-   
+    <title>Calculate Product Discount</title>
 </head>
 <body>
-    <h1>Calculate price with discount</h1>
-
-    <label for="price">Type the product price: </label>
-    <input id="price" type="number" />
-    <label for="discount">Type the discount: </label>
-    <input id="discount" type="number" />
-
-    <button id="calculate">Calculate Discount</button> 
-
+    <h1>Calculate Product Discount</h1>
+    <label for="price">Product Original Price:</label>
+        <label>Enter Price:</label>
+        <input type="text" id="price" placeholder="Enter price">
+        <br>
+        <label>Enter Coupon:</label>
+        <input type="text" id="coupon" placeholder="Enter coupon">
+        <br>
+        <button id="calculate">Calculate Discount</button>
+    <br>
     <p id="newPrice"></p>
-    <script src="./discounts.js"></script>
+    <script type="text/javascript" src="discounts.js"></script>
 </body>
 </html>
