@@ -1,13 +1,23 @@
 const lista = [];
 
-function calcularPromedio(lista) {
-    //     let sumaLista = 0;
-    //     for (let i = 0; i < lista.length; i++) {
-    //         sumaLista = sumaLista + lista[i];
-    //     }
+function esPar(lista) {
+    return !(lista.length % 2);
+}
 
-    //     return (sumaLista / lista.length);
-    // }
+function calcularMediana(lista) {
+    const listaEsPar = esPar(lista);
+
+    if (listaEsPar) {
+        const indexMitadListaPar = Math.floor(lista.length / 2);
+        console.log(indexMitadListaPar)
+    } else {
+        const indexMitadListaimpar = Math.floor(lista.length / 2);
+        console.log(lista[indexMitadListaimpar])
+    }
+}
+
+function calcularPromedio(lista) {
+
 
     function addAllElemments(accumulatedValue, newValue) {
         return (accumulatedValue + newValue)
